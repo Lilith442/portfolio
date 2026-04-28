@@ -12,6 +12,9 @@ function App() {
       about2: "API entegrasyonu, state yönetimi ve modern UI tasarımlarına odaklanıyorum.",
       button: "Projeleri Gör",
       title: "Frontend Developer",
+      phone: "Telefon",
+      cv: "CV İndir",
+      demo: "Canlı Demo",
       projectsData: [
         {
           title: "Game Explorer",
@@ -34,7 +37,10 @@ function App() {
       about1: "I build user-focused interfaces with React.",
       about2: "Focused on API integration, state management and modern UI design.",
       button: "View Projects",
-      title: "Frontend Developer (React)",
+      title: "Frontend Developer",
+      phone: "Phone",
+      cv: "Download CV",
+      demo: "Live Demo",
       projectsData: [
         {
           title: "Game Explorer",
@@ -54,24 +60,35 @@ function App() {
 
   return (
     <div>
-      {/* NAV */}
       <nav>
-        <h2>Ebrar Büşra Kısa</h2>
+        <h2>
+          <a href="#" className="logo">Ebrar Büşra Kısa</a>
+        </h2>
 
         <div className="nav-right">
           <div className="nav-links">
+            <a href="#about">{texts[lang].about}</a>
             <a href="#projects">{texts[lang].projects}</a>
             <a href="#contact">{texts[lang].contact}</a>
-          </div>
-
-          <div className="lang-switch">
-            <button onClick={() => setLang("tr")}>TR</button>
-            <button onClick={() => setLang("en")}>EN</button>
-          </div>
         </div>
-      </nav>
 
-      {/* HERO */}
+        <div className="lang-switch">
+          <button
+            className={lang === "tr" ? "active" : ""}
+            onClick={() => setLang("tr")}
+          >
+          TR
+          </button>
+          <button
+            className={lang === "en" ? "active" : ""}
+            onClick={() => setLang("en")}
+          >
+          EN
+        </button>
+    </div>
+  </div>
+</nav>
+
       <header className="hero">
         <div className="hero-content">
           <img src="/profile.jpg" alt="profile" className="hero-img" />
@@ -90,6 +107,7 @@ function App() {
               {texts[lang].about}
             </a>
           </div>
+
           <div className="socials">
             <a href="https://github.com/Lilith442" target="_blank" rel="noreferrer">
               <i className="fab fa-github"></i>
@@ -101,24 +119,30 @@ function App() {
         </div>
       </header>
 
-      {/* ABOUT */}
       <section id="about">
         <h1>{texts[lang].about}</h1>
+
         <div className="about-box">
-          <p>{texts[lang].about1}</p>
-          <p>{texts[lang].about2}</p>
-          
-        <div className="about-tags">
-          <span>React</span>
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS</span>
-        </div>
-        <a href="CV_LINKİN" className="cv-btn">CV İndir</a>
+          <div className="about-text">
+            <p>{texts[lang].about1}</p>
+            <p>{texts[lang].about2}</p>
+          </div>
+
+          <div className="about-side">
+            <div className="about-tags">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+
+            <a href="#" className="cv-btn">
+              {texts[lang].cv}
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* PROJECTS */}
       <section id="projects">
         <h1>{texts[lang].projects}</h1>
 
@@ -131,28 +155,25 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* 🔥 BACKGROUND IMAGE */}
               <div
                 className="card-bg"
                 style={{ backgroundImage: `url(${proj.image})` }}
               ></div>
 
-              {/* 🔥 CONTENT */}
               <div className="card-overlay">
                 <h3>{proj.title}</h3>
                 <p>{proj.desc}</p>
-                <span className="card-btn">Live Demo</span>
+                <span className="card-btn">{texts[lang].demo}</span>
               </div>
             </a>
           ))}
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact">
+      <section id="contact" className="center">
         <h1>{texts[lang].contact}</h1>
         <p>Email: ebrarbusrak@gmail.com</p>
-        <p>Telefon: +90 539 731 4369</p>
+        <p>{texts[lang].phone}: +90 539 731 4369</p>
       </section>
     </div>
   );
