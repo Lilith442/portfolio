@@ -2,8 +2,6 @@ import { useState } from "react";
 
 function App() {
   const [lang, setLang] = useState("tr");
-  const cvLink = lang === "tr" ? "/cv-tr.pdf" : "/cv-en.pdf";
-  const cvText = lang === "tr" ? "CV İndir" : "Download CV";
 
   const texts = {
     tr: {
@@ -66,7 +64,7 @@ function App() {
     <div id= "top">
       <nav>
         <h2>
-          <a href="#top" className="logo">Ebrar Büşra Kısa</a>
+          <a href="https://portfolio-mauve-alpha-87.vercel.app/" className="logo">Ebrar Büşra Kısa</a>
         </h2>
 
         <div className="nav-right">
@@ -147,7 +145,7 @@ function App() {
         </div>
       </section>
 
-      <section className="hire">
+  <section className="hire">
   <h2>{lang === "tr" ? "Benimle Çalışmak İster misiniz?" : "Want to work with me?"}</h2>
 
   <p>

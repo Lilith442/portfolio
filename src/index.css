@@ -421,33 +421,40 @@ animation-fill-mode: forwards;
 }
 
 .hire {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* dikey ortalama */
+  align-items: center;     /* yatay ortalama */
+
   text-align: center;
-  margin-top: 60px;
   padding: 40px 20px;
 
   background: rgba(255,255,255,0.05);
   border-radius: 12px;
+  backdrop-filter: blur(6px);
 }
 
 .hire h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .hire p {
   max-width: 600px;
-  margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .hire-buttons {
   display: flex;
-  justify-content: center;
   gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hire-btn {
-  padding: 10px 18px;
+  padding: 12px 22px;
   border-radius: 8px;
   background: #DE802B;
   color: white;
@@ -458,6 +465,7 @@ animation-fill-mode: forwards;
 .hire-btn.secondary {
   background: transparent;
   border: 1px solid #DE802B;
+  color: #D8C9A7;
 }
 
 .hire-btn:hover {
