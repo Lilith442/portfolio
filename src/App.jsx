@@ -2,6 +2,8 @@ import { useState } from "react";
 
 function App() {
   const [lang, setLang] = useState("tr");
+  const cvLink = lang === "tr" ? "/cv-tr.pdf" : "/cv-en.pdf";
+  const cvText = lang === "tr" ? "CV İndir" : "Download CV";
 
   const texts = {
     tr: {
@@ -14,6 +16,7 @@ function App() {
       title: "Frontend Developer",
       phone: "Telefon",
       cv: "CV İndir",
+      cvFile: "/cv-tr.pdf",
       demo: "Canlı Demo",
       projectsData: [
         {
@@ -40,6 +43,7 @@ function App() {
       title: "Frontend Developer",
       phone: "Phone",
       cv: "Download CV",
+      cvFile: "/cv-en.pdf",
       demo: "Live Demo",
       projectsData: [
         {
@@ -59,10 +63,10 @@ function App() {
   };
 
   return (
-    <div>
+    <div id= "top">
       <nav>
         <h2>
-          <a href="#" className="logo">Ebrar Büşra Kısa</a>
+          <a href="#top" className="logo">Ebrar Büşra Kısa</a>
         </h2>
 
         <div className="nav-right">
@@ -136,12 +140,32 @@ function App() {
               <span>CSS</span>
             </div>
 
-            <a href="#" className="cv-btn">
-              {texts[lang].cv}
-            </a>
+           <a href={texts[lang].cvFile} download className="cv-btn">
+            📄 {texts[lang].cv}
+          </a>
           </div>
         </div>
       </section>
+
+      <section className="hire">
+  <h2>{lang === "tr" ? "Benimle Çalışmak İster misiniz?" : "Want to work with me?"}</h2>
+
+  <p>
+    {lang === "tr"
+      ? "Gerçek projelerde değer katabileceğim, öğrenmeye açık bir frontend developerım."
+      : "I’m a frontend developer ready to contribute to real-world projects and grow with your team."}
+  </p>
+
+  <div className="hire-buttons">
+    <a href="mailto:ebrarbusrak@gmail.com" className="hire-btn">
+      📩 {lang === "tr" ? "Email Gönder" : "Send Email"}
+    </a>
+
+    <a href="#projects" className="hire-btn secondary">
+      🚀 {lang === "tr" ? "Projelerimi Gör" : "View Projects"}
+    </a>
+  </div>
+</section>
 
       <section id="projects">
         <h1>{texts[lang].projects}</h1>
@@ -172,7 +196,7 @@ function App() {
 
       <section id="contact" className="center">
         <h1>{texts[lang].contact}</h1>
-        <p>Email: ebrarbusrak@gmail.com</p>
+        <p>Email: <a href="mailto:ebrarbusrak@gmail.com">ebrarbusrak@gmail.com</a></p>
         <p>{texts[lang].phone}: +90 539 731 4369</p>
       </section>
     </div>
