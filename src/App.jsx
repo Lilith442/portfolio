@@ -33,19 +33,27 @@ function App() {
       projectsData: [
         {
           title: "Task App",
-          desc:
-            "Görev yönetimi, tekrar eden görevler, alt görevler ve üretkenlik analizleri içeren görev uygulaması.",
+          desc: "Görev yönetimi, tekrar eden görevler, alt görevler ve üretkenlik analizleri içeren görev uygulaması.",
           tech: ["React", "Supabase", "JavaScript"],
+          features: [
+            "Doğrulama",
+            "Tekrarlanan görevler",
+            "Üretkenlik"
+          ],
           link: "https://task-app-tau-six.vercel.app/",
           github: "https://github.com/Lilith442/task-app",
           image: "/task.png"
-        },
+        }
 
         {
           title: "Game Explorer",
-          desc:
-            "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
+          desc: "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
           tech: ["React", "JavaScript", "REST API"],
+          features: [
+            "Oyun Arama",
+            "API Integration",
+            "Responsive UI"
+          ],
           link: "https://game-explorer-nine.vercel.app/",
           github: "https://github.com/Lilith442/game-explorer",
           image: "/game.png"
@@ -81,23 +89,31 @@ function App() {
       projectsData: [
         {
           title: "Task App",
-          desc:
-            "A task management application with recurring tasks, subtasks and productivity analytics.",
+          desc: "A task management application with recurring tasks, subtasks and productivity analytics.",
           tech: ["React", "Supabase", "JavaScript"],
+          features: [
+            "Authentication",
+            "Recurring Tasks",
+            "Productivity Analytics"
+          ],
           link: "https://task-app-tau-six.vercel.app/",
           github: "https://github.com/Lilith442/task-app",
           image: "/task.png"
-        },
-
-        {
-          title: "Game Explorer",
-          desc:
-            "A game search and discovery application built with the RAWG API.",
-          tech: ["React", "JavaScript", "REST API"],
-          link: "https://game-explorer-nine.vercel.app/",
-          github: "https://github.com/Lilith442/game-explorer",
-          image: "/game.png"
         }
+
+       {
+        title: "Game Explorer",
+        desc: "A game search and discovery application built with the RAWG API.",
+        tech: ["React", "JavaScript", "REST API"],
+        features: [
+          "Game Search",
+          "API Integration",
+          "Responsive UI"
+        ],
+        link: "https://game-explorer-nine.vercel.app/",
+        github: "https://github.com/Lilith442/game-explorer",
+        image: "/game.png"
+      }
       ]
     }
   };
@@ -277,6 +293,80 @@ function App() {
         📄 {texts[lang].cv}
       </a>
 
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h1>{lang === "tr" ? "Yetenekler" : "Skills"}</h1>
+
+  <div className="skills-grid">
+
+    <div className="skill-box">
+      <div className="skill-icon">⚛️</div>
+
+      <h3>
+        {lang === "tr" ? "Frontend Geliştirme" : "Frontend Development"}
+      </h3>
+
+      <p>
+        {lang === "tr"
+          ? "Modern, responsive ve kullanıcı odaklı web arayüzleri."
+          : "Modern, responsive and user-focused web interfaces."}
+      </p>
+
+      <div className="skill-tags">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+
+
+    <div className="skill-box">
+      <div className="skill-icon">🔗</div>
+
+      <h3>
+        {lang === "tr" ? "API & Backend Servisleri" : "API & Backend Services"}
+      </h3>
+
+      <p>
+        {lang === "tr"
+          ? "Veri alışverişi, authentication ve backend servisleriyle entegrasyon."
+          : "Data exchange, authentication and integration with backend services."}
+      </p>
+
+      <div className="skill-tags">
+        <span>REST API</span>
+        <span>Supabase</span>
+        <span>Authentication</span>
+        <span>RLS</span>
+      </div>
+    </div>
+
+
+    <div className="skill-box">
+      <div className="skill-icon">🛠️</div>
+
+      <h3>
+        {lang === "tr" ? "Araçlar & Workflow" : "Tools & Workflow"}
+      </h3>
+
+      <p>
+        {lang === "tr"
+          ? "Kod yönetimi, deployment ve uygulama geliştirme süreçleri."
+          : "Version control, deployment and modern development workflows."}
+      </p>
+
+      <div className="skill-tags">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Vercel</span>
+        <span>LocalStorage</span>
+      </div>
     </div>
 
   </div>
