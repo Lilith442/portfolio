@@ -361,6 +361,72 @@ p {
   min-width: 200px;
 }
 
+.about-side h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #D8C9A7;
+}
+
+.about-points {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  transition: 0.3s;
+}
+
+.about-point:hover {
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.08);
+}
+
+.about-point > span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.about-point strong {
+  color: #BFC6C4;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.about-point p {
+  margin: 0;
+  font-size: 13px;
+  color: #D8C9A7;
+}
+
+.about-tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-tags span {
+  margin: 0;
+  padding: 7px 12px;
+  background: #DE802B;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.about-tags span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 .about-tags {
   margin-top: 15px;
 }

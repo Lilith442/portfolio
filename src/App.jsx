@@ -22,6 +22,14 @@ function App() {
 
       demo: "Canlı Demo",
 
+      techTitle: "Teknolojiler",
+      point1Title: "Frontend Development",
+      point1Text: "React, JavaScript ve responsive UI geliştirme.",
+      point2Title: "API & Integration",
+      point2Text: "REST API, veri yönetimi ve uygulama entegrasyonları.",
+      point3Title: "Real-world Projects",
+      point3Text: "Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.",
+
       projectsData: [
         {
           title: "Task App",
@@ -62,6 +70,13 @@ function App() {
       cvFile: "/cv-en.pdf",
 
       demo: "Live Demo",
+      techTitle: "Technologies",
+      point1Title: "Frontend Development",
+      point1Text: "React, JavaScript and responsive UI development.",
+      point2Title: "API & Integration",
+      point2Text: "REST APIs, data management and application integrations.",
+      point3Title: "Real-world Projects",
+      point3Text: "Building projects focused on real-world use cases.",
 
       projectsData: [
         {
@@ -222,24 +237,24 @@ function App() {
         <div className="about-point">
           <span>⚛️</span>
           <div>
-            <strong>Frontend Development</strong>
-            <p>React, JavaScript ve responsive UI geliştirme.</p>
+            <strong>{texts[lang].point1Title}</strong>
+            <p>{texts[lang].point1Text}</p>
           </div>
         </div>
 
         <div className="about-point">
           <span>🔗</span>
           <div>
-            <strong>API & Integration</strong>
-            <p>REST API, veri yönetimi ve uygulama entegrasyonları.</p>
+            <strong>{texts[lang].point2Title}</strong>
+            <p>{texts[lang].point2Text}</p>
           </div>
         </div>
 
         <div className="about-point">
           <span>🚀</span>
           <div>
-            <strong>Real-world Projects</strong>
-            <p>Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.</p>
+            <strong>{texts[lang].point3Title}</strong>
+            <p>{texts[lang].point3Text}</p>
           </div>
         </div>
       </div>
@@ -247,7 +262,7 @@ function App() {
 
     <div className="about-side">
 
-      <h3>{lang === "tr" ? "Teknolojiler" : "Technologies"}</h3>
+      <h3>{texts[lang].techTitle}</h3>
 
       <div className="about-tags">
         <span>React</span>
