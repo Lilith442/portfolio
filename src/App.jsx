@@ -9,9 +9,8 @@ function App() {
       projects: "Projeler",
       contact: "İletişim",
 
-      about1: "React ile kullanıcı odaklı arayüzler geliştiriyorum.",
-      about2:
-        "API entegrasyonu, state yönetimi ve modern UI tasarımlarına odaklanıyorum.",
+      about1: "React ve JavaScript kullanarak kullanıcı odaklı, responsive ve modern web arayüzleri geliştiriyorum.",
+      about2: "API entegrasyonu, state yönetimi ve Supabase ile authentication gibi gerçek proje ihtiyaçları üzerinde çalışıyorum.",
 
       button: "Projeleri Gör",
       title: "Frontend Developer",
@@ -51,9 +50,8 @@ function App() {
       projects: "Projects",
       contact: "Contact",
 
-      about1: "I build user-focused interfaces with React.",
-      about2:
-        "Focused on API integration, state management and modern UI design.",
+      about1: "I build user-focused, responsive and modern web interfaces using React and JavaScript.",
+      about2: "I work with API integration, state management and real-world features such as authentication with Supabase.",
 
       button: "View Projects",
       title: "Frontend Developer",
@@ -210,52 +208,64 @@ function App() {
       </header>
 
 
-      <section id="about">
+<section id="about">
+  <h1>{texts[lang].about}</h1>
 
-        <h1>
-          {texts[lang].about}
-        </h1>
+  <div className="about-box">
 
-        <div className="about-box">
+    <div className="about-text">
+      <p>{texts[lang].about1}</p>
 
-          <div className="about-text">
+      <p>{texts[lang].about2}</p>
 
-            <p>
-              {texts[lang].about1}
-            </p>
-
-            <p>
-              {texts[lang].about2}
-            </p>
-
+      <div className="about-points">
+        <div className="about-point">
+          <span>⚛️</span>
+          <div>
+            <strong>Frontend Development</strong>
+            <p>React, JavaScript ve responsive UI geliştirme.</p>
           </div>
-
-
-          <div className="about-side">
-
-            <div className="about-tags">
-
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-
-            </div>
-
-
-            <a
-              href={texts[lang].cvFile}
-              download
-              className="cv-btn"
-            >
-              📄 {texts[lang].cv}
-            </a>
-
-          </div>
-
         </div>
 
-      </section>
+        <div className="about-point">
+          <span>🔗</span>
+          <div>
+            <strong>API & Integration</strong>
+            <p>REST API, veri yönetimi ve uygulama entegrasyonları.</p>
+          </div>
+        </div>
+
+        <div className="about-point">
+          <span>🚀</span>
+          <div>
+            <strong>Real-world Projects</strong>
+            <p>Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="about-side">
+
+      <h3>{lang === "tr" ? "Teknolojiler" : "Technologies"}</h3>
+
+      <div className="about-tags">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Supabase</span>
+        <span>REST API</span>
+      </div>
+
+      <a href={texts[lang].cvFile} download className="cv-btn">
+        📄 {texts[lang].cv}
+      </a>
+
+    </div>
+
+  </div>
+</section>
 
 
       <section className="hire">
