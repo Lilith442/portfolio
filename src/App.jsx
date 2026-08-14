@@ -3,105 +3,113 @@ import { useState } from "react";
 function App() {
   const [lang, setLang] = useState("tr");
 
-  const texts = {
-    tr: {
-      about: "Hakkımda",
-      projects: "Projeler",
-      contact: "İletişim",
+ const texts = {
+  tr: {
+    about: "Hakkımda",
+    projects: "Projeler",
+    contact: "İletişim",
 
-      about1: "React ve JavaScript kullanarak kullanıcı odaklı, responsive ve modern web arayüzleri geliştiriyorum.",
-      about2: "API entegrasyonu, state yönetimi ve Supabase ile authentication gibi gerçek proje ihtiyaçları üzerinde çalışıyorum.",
+    about1:
+      "React ve JavaScript kullanarak kullanıcı odaklı, responsive ve modern web arayüzleri geliştiriyorum.",
+    about2:
+      "API entegrasyonu, state yönetimi ve Supabase ile authentication gibi gerçek proje ihtiyaçları üzerinde çalışıyorum.",
 
-      button: "Projeleri Gör",
-      title: "Frontend Developer",
+    button: "Projeleri Gör",
+    title: "Frontend Developer",
 
-      phone: "Telefon",
+    phone: "Telefon",
 
-      cv: "CV İndir",
-      cvFile: "/cv-tr.pdf",
+    cv: "CV İndir",
+    cvFile: "/cv-tr.pdf",
 
-      demo: "Canlı Demo",
+    demo: "Canlı Demo",
 
-      techTitle: "Teknolojiler",
-      point1Title: "Frontend Development",
-      point1Text: "React, JavaScript ve responsive UI geliştirme.",
-      point2Title: "API & Integration",
-      point2Text: "REST API, veri yönetimi ve uygulama entegrasyonları.",
-      point3Title: "Real-world Projects",
-      point3Text: "Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.",
+    techTitle: "Teknolojiler",
+    point1Title: "Frontend Development",
+    point1Text: "React, JavaScript ve responsive UI geliştirme.",
+    point2Title: "API & Integration",
+    point2Text: "REST API, veri yönetimi ve uygulama entegrasyonları.",
+    point3Title: "Real-world Projects",
+    point3Text:
+      "Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.",
 
-      projectsData: [
-        {
-          title: "Task App",
-          desc: "Görev yönetimi, tekrar eden görevler, alt görevler ve üretkenlik analizleri içeren görev uygulaması.",
-          tech: ["React", "Supabase", "JavaScript"],
-          features: [
-            "Doğrulama",
-            "Tekrarlanan görevler",
-            "Üretkenlik"
-          ],
-          link: "https://task-app-tau-six.vercel.app/",
-          github: "https://github.com/Lilith442/task-app",
-          image: "/task.png"
-        }
+    projectsData: [
+      {
+        title: "Task App",
+        desc: "Görev yönetimi, tekrar eden görevler, alt görevler ve üretkenlik analizleri içeren görev uygulaması.",
+        tech: ["React", "Supabase", "JavaScript"],
+        features: [
+          "Doğrulama",
+          "Tekrarlanan görevler",
+          "Üretkenlik"
+        ],
+        link: "https://task-app-tau-six.vercel.app/",
+        github: "https://github.com/Lilith442/task-app",
+        image: "/task.png"
+      },
 
-        {
-          title: "Game Explorer",
-          desc: "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
-          tech: ["React", "JavaScript", "REST API"],
-          features: [
-            "Oyun Arama",
-            "API Integration",
-            "Responsive UI"
-          ],
-          link: "https://game-explorer-nine.vercel.app/",
-          github: "https://github.com/Lilith442/game-explorer",
-          image: "/game.png"
-        }
-      ]
-    },
+      {
+        title: "Game Explorer",
+        desc: "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
+        tech: ["React", "JavaScript", "REST API"],
+        features: [
+          "Oyun Arama",
+          "API Integration",
+          "Responsive UI"
+        ],
+        link: "https://game-explorer-nine.vercel.app/",
+        github: "https://github.com/Lilith442/game-explorer",
+        image: "/game.png"
+      }
+    ]
+  },
 
-    en: {
-      about: "About",
-      projects: "Projects",
-      contact: "Contact",
+  en: {
+    about: "About",
+    projects: "Projects",
+    contact: "Contact",
 
-      about1: "I build user-focused, responsive and modern web interfaces using React and JavaScript.",
-      about2: "I work with API integration, state management and real-world features such as authentication with Supabase.",
+    about1:
+      "I build user-focused, responsive and modern web interfaces using React and JavaScript.",
+    about2:
+      "I work with API integration, state management and real-world features such as authentication with Supabase.",
 
-      button: "View Projects",
-      title: "Frontend Developer",
+    button: "View Projects",
+    title: "Frontend Developer",
 
-      phone: "Phone",
+    phone: "Phone",
 
-      cv: "Download CV",
-      cvFile: "/cv-en.pdf",
+    cv: "Download CV",
+    cvFile: "/cv-en.pdf",
 
-      demo: "Live Demo",
-      techTitle: "Technologies",
-      point1Title: "Frontend Development",
-      point1Text: "React, JavaScript and responsive UI development.",
-      point2Title: "API & Integration",
-      point2Text: "REST APIs, data management and application integrations.",
-      point3Title: "Real-world Projects",
-      point3Text: "Building projects focused on real-world use cases.",
+    demo: "Live Demo",
 
-      projectsData: [
-        {
-          title: "Task App",
-          desc: "A task management application with recurring tasks, subtasks and productivity analytics.",
-          tech: ["React", "Supabase", "JavaScript"],
-          features: [
-            "Authentication",
-            "Recurring Tasks",
-            "Productivity Analytics"
-          ],
-          link: "https://task-app-tau-six.vercel.app/",
-          github: "https://github.com/Lilith442/task-app",
-          image: "/task.png"
-        }
+    techTitle: "Technologies",
+    point1Title: "Frontend Development",
+    point1Text: "React, JavaScript and responsive UI development.",
+    point2Title: "API & Integration",
+    point2Text:
+      "REST APIs, data management and application integrations.",
+    point3Title: "Real-world Projects",
+    point3Text:
+      "Building projects focused on real-world use cases.",
 
-       {
+    projectsData: [
+      {
+        title: "Task App",
+        desc: "A task management application with recurring tasks, subtasks and productivity analytics.",
+        tech: ["React", "Supabase", "JavaScript"],
+        features: [
+          "Authentication",
+          "Recurring Tasks",
+          "Productivity Analytics"
+        ],
+        link: "https://task-app-tau-six.vercel.app/",
+        github: "https://github.com/Lilith442/task-app",
+        image: "/task.png"
+      },
+
+      {
         title: "Game Explorer",
         desc: "A game search and discovery application built with the RAWG API.",
         tech: ["React", "JavaScript", "REST API"],
@@ -114,9 +122,9 @@ function App() {
         github: "https://github.com/Lilith442/game-explorer",
         image: "/game.png"
       }
-      ]
-    }
-  };
+    ]
+  }
+};
 
   return (
     <div id="top">
@@ -458,6 +466,12 @@ function App() {
 
                   ))}
 
+                </div>
+
+                <div className="project-features">
+                  {proj.features.map((feature) => (
+                    <span key={feature}>✓ {feature}</span>
+                  ))}
                 </div>
 
 
