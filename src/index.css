@@ -779,28 +779,95 @@ p {
   color: #5C6F2B;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
-#contact {
+.contact-section {
+  min-height: 100vh;
+  padding: 80px 40px;
   display: flex;
-
-  flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
+  box-sizing: border-box;
 }
 
-#contact a {
-  color: #DE802B;
-
-  font-weight: 600;
+.contact-content {
+  width: 100%;
+  max-width: 850px;
 }
 
+.contact-content h1 {
+  margin-bottom: 15px;
+}
+
+.contact-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #BFC6C4;
+}
+
+.contact-description {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+  color: #D8C9A7;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.05);
+  text-decoration: none;
+  color: #BFC6C4;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #DE802B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.contact-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-card strong {
+  color: #BFC6C4;
+  font-size: 15px;
+}
+
+.contact-card div span {
+  color: #D8C9A7;
+  font-size: 12px;
+  word-break: break-word;
+}
 /* =========================
    ANIMATIONS
 ========================= */
@@ -1115,6 +1182,27 @@ p {
 
   .about-point p {
     font-size: 12px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-content h2 {
+    font-size: 26px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-card {
+    padding: 16px;
   }
 
 }

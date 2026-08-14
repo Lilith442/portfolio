@@ -32,6 +32,12 @@ function App() {
     point3Title: "Real-world Projects",
     point3Text:
       "Gerçek kullanım senaryolarına yönelik projeler geliştiriyorum.",
+    contactTitle: "Birlikte çalışalım",
+    contactText:
+      "Yeni projeler, iş fırsatları veya iş birlikleri için benimle iletişime geçebilirsiniz.",
+    emailButton: "Email Gönder",
+    githubButton: "GitHub",
+    linkedinButton: "LinkedIn",
 
     projectsData: [
       {
@@ -93,7 +99,12 @@ function App() {
     point3Title: "Real-world Projects",
     point3Text:
       "Building projects focused on real-world use cases.",
-
+    contactTitle: "Let's work together",
+    contactText:
+      "Feel free to contact me for new projects, job opportunities or collaborations.",
+    emailButton: "Send Email",
+    githubButton: "GitHub",
+    linkedinButton: "LinkedIn",
     projectsData: [
       {
         title: "Task App",
@@ -142,19 +153,12 @@ function App() {
         <div className="nav-right">
 
           <div className="nav-links">
-
-            <a href="#about">
-              {texts[lang].about}
+            <a href="#about">{texts[lang].about}</a>
+            <a href="#skills">
+              {lang === "tr" ? "Yetenekler" : "Skills"}
             </a>
-
-            <a href="#projects">
-              {texts[lang].projects}
-            </a>
-
-            <a href="#contact">
-              {texts[lang].contact}
-            </a>
-
+            <a href="#projects">{texts[lang].projects}</a>
+            <a href="#contact">{texts[lang].contact}</a>
           </div>
 
           <div className="lang-switch">
@@ -508,28 +512,67 @@ function App() {
 
       </section>
 
+<section id="contact" className="contact-section">
 
-      <section
-        id="contact"
-        className="center"
+  <div className="contact-content">
+
+    <h1>{texts[lang].contact}</h1>
+
+    <h2>{texts[lang].contactTitle}</h2>
+
+    <p className="contact-description">
+      {texts[lang].contactText}
+    </p>
+
+    <div className="contact-links">
+
+      <a
+        href="mailto:ebrarbusrak@gmail.com"
+        className="contact-card"
       >
+        <span className="contact-icon">📩</span>
 
-        <h1>
-          {texts[lang].contact}
-        </h1>
+        <div>
+          <strong>{texts[lang].emailButton}</strong>
+          <span>ebrarbusrak@gmail.com</span>
+        </div>
+      </a>
 
-        <p>
-          Email:{" "}
-          <a href="mailto:ebrarbusrak@gmail.com">
-            ebrarbusrak@gmail.com
-          </a>
-        </p>
 
-        <p>
-          {texts[lang].phone}: +90 539 731 4369
-        </p>
+      <a
+        href="https://github.com/Lilith442"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-card"
+      >
+        <span className="contact-icon">💻</span>
 
-      </section>
+        <div>
+          <strong>{texts[lang].githubButton}</strong>
+          <span>github.com/Lilith442</span>
+        </div>
+      </a>
+
+
+      <a
+        href="https://linkedin.com/in/ebrar-büşra-kısa-83395b243"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-card"
+      >
+        <span className="contact-icon">💼</span>
+
+        <div>
+          <strong>{texts[lang].linkedinButton}</strong>
+          <span>LinkedIn Profile</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
     </div>
   );
