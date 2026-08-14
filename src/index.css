@@ -997,3 +997,25 @@ p {
     padding: 8px 11px;
   }
 }
+
+@media (max-width: 600px) {
+
+  .about-box {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .about-text,
+  .about-side {
+    min-width: 100%;
+  }
+
+  .about-point {
+    padding: 10px;
+  }
+
+  .about-point p {
+    font-size: 12px;
+  }
+
+}
