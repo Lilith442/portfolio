@@ -146,10 +146,13 @@ function App() {
             href="https://portfolio-mauve-alpha-87.vercel.app/"
             className="logo"
           >
-            Ebrar Büşra Kısa
+            <img
+              src="/portfolio-logo.png"
+              alt="Ebrar Büşra Kısa"
+              className="portfolio-logo"
+            />
           </a>
         </h2>
-
         <div className="nav-right">
 
           <div className="nav-links">

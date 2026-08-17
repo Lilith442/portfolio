@@ -60,12 +60,20 @@ nav h2 {
 
 .logo {
   text-decoration: none;
-  color: #BFC6C4;
+  display: flex;
+  align-items: center;
   transition: 0.3s;
 }
 
 .logo:hover {
-  color: white;
+  transform: scale(1.05);
+}
+
+.portfolio-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-right {
