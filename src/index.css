@@ -423,34 +423,21 @@ p {
 
 .about-tags span {
   margin: 0;
+
   padding: 7px 12px;
+
   background: #DE802B;
+
   border-radius: 6px;
+
   font-size: 12px;
+  
   transition: 0.3s;
 }
 
 .about-tags span:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.about-tags {
-  margin-top: 15px;
-}
-
-.about-tags span {
-  display: inline-block;
-
-  margin: 5px;
-
-  padding: 6px 12px;
-
-  background: #DE802B;
-
-  border-radius: 6px;
-
-  font-size: 12px;
 }
 
 .cv-btn {
