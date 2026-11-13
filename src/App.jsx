@@ -39,37 +39,48 @@ function App() {
     githubButton: "GitHub",
     linkedinButton: "LinkedIn",
 
-    projectsData: [
-      {
-        title: "Task App",
-        desc: "Görev yönetimi, tekrar eden görevler, alt görevler ve üretkenlik analizleri içeren görev uygulaması.",
-        tech: ["React", "Supabase", "JavaScript"],
-        features: [
-          "Doğrulama",
-          "Tekrarlanan görevler",
-          "Üretkenlik"
-        ],
-        link: "https://task-app-tau-six.vercel.app/",
-        github: "https://github.com/Lilith442/task-app",
-        image: "/task.png"
-      },
-
-      {
-        title: "Game Explorer",
-        desc: "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
-        tech: ["React", "JavaScript", "REST API"],
-        features: [
-          "Oyun Arama",
-          "API Integration",
-          "Responsive UI"
-        ],
-        link: "https://game-explorer-nine.vercel.app/",
-        github: "https://github.com/Lilith442/game-explorer",
-        image: "/game.png"
-      }
-    ]
+projectsData: [
+  {
+    title: "Task App",
+    desc: "Görev yönetimi, tekrar eden görevler, alt görevlar ve üretkenlik analizleri içeren görev uygulaması.",
+    tech: ["React", "Supabase", "JavaScript"],
+    features: [
+      "Doğrulama",
+      "Tekrarlanan görevler",
+      "Üretkenlik"
+    ],
+    link: "https://task-app-tau-six.vercel.app/",
+    github: "https://github.com/Lilith442/task-app",
+    image: "/task.png"
   },
-
+  {
+    title: "Task-App Mobile",
+    desc: "Görevlerini yönetmeni, hatırlatıcılar oluşturmanı ve üretkenliğini takip etmeni sağlayan mobil uygulama.",
+    tech: ["React Native", "Expo", "TypeScript", "Supabase"],
+    features: [
+      "Görev Yönetimi",
+      "Bildirimler",
+      "Takvim",
+      "Üretkenlik Takibi"
+    ],
+    storeLink: "https://play.google.com/store/apps/details?id=com.ebrarbusra.taskapp",
+    image: "/task-mobile.png"
+  },
+  {
+    title: "Game Explorer",
+    desc: "RAWG API kullanarak geliştirilen oyun arama ve keşif uygulaması.",
+    tech: ["React", "JavaScript", "REST API"],
+    features: [
+      "Oyun Arama",
+      "API Integration",
+      "Responsive UI"
+    ],
+    link: "https://game-explorer-nine.vercel.app/",
+    github: "https://github.com/Lilith442/game-explorer",
+    image: "/game.png"
+  }
+],
+},
   en: {
     about: "About",
     projects: "Projects",
@@ -105,36 +116,49 @@ function App() {
     emailButton: "Send Email",
     githubButton: "GitHub",
     linkedinButton: "LinkedIn",
-    projectsData: [
-      {
-        title: "Task App",
-        desc: "A task management application with recurring tasks, subtasks and productivity analytics.",
-        tech: ["React", "Supabase", "JavaScript"],
-        features: [
-          "Authentication",
-          "Recurring Tasks",
-          "Productivity Analytics"
-        ],
-        link: "https://task-app-tau-six.vercel.app/",
-        github: "https://github.com/Lilith442/task-app",
-        image: "/task.png"
-      },
-
-      {
-        title: "Game Explorer",
-        desc: "A game search and discovery application built with the RAWG API.",
-        tech: ["React", "JavaScript", "REST API"],
-        features: [
-          "Game Search",
-          "API Integration",
-          "Responsive UI"
-        ],
-        link: "https://game-explorer-nine.vercel.app/",
-        github: "https://github.com/Lilith442/game-explorer",
-        image: "/game.png"
-      }
-    ]
+  
+projectsData: [
+  {
+    title: "Task App",
+    desc: "A task management application with recurring tasks, subtasks and productivity analytics.",
+    tech: ["React", "Supabase", "JavaScript"],
+    features: [
+      "Authentication",
+      "Recurring Tasks",
+      "Productivity Analytics"
+    ],
+    link: "https://task-app-tau-six.vercel.app/",
+    github: "https://github.com/Lilith442/task-app",
+    image: "/task.png"
+  },
+  {
+    title: "Task-App Mobile",
+    desc: "A mobile app that helps you manage tasks, create reminders, and track your productivity.",
+    tech: ["React Native", "Expo", "TypeScript", "Supabase"],
+    features: [
+      "Task Management",
+      "Notifications",
+      "Calendar",
+      "Productivity Tracking"
+    ],
+    storeLink: "https://play.google.com/store/apps/details?id=com.ebrarbusra.taskapp",
+    image: "/task-mobile.png"
+  },
+  {
+    title: "Game Explorer",
+    desc: "A game search and discovery application built with the RAWG API.",
+    tech: ["React", "JavaScript", "REST API"],
+    features: [
+      "Game Search",
+      "API Integration",
+      "Responsive UI"
+    ],
+    link: "https://game-explorer-nine.vercel.app/",
+    github: "https://github.com/Lilith442/game-explorer",
+    image: "/game.png"
   }
+],
+}
 };
 
   return (
@@ -483,26 +507,36 @@ function App() {
 
 
                 <div className="project-links">
+                  {proj.storeLink ? (
+                    <a
+                      href={proj.storeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-btn"
+                    >
+                      ▶ Google Play
+                    </a>
+                  ) : proj.link ? (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-btn"
+                    >
+                      🚀 {texts[lang].demo}
+                    </a>
+                  ) : null}
 
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="card-btn"
-                  >
-                    🚀 {texts[lang].demo}
-                  </a>
-
-
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="card-btn github-btn"
-                  >
-                    GitHub
-                  </a>
-
+                  {proj.github && (
+                    <a
+                      href={proj.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-btn github-btn"
+                    >
+                      GitHub
+                    </a>
+                  )}
                 </div>
 
               </div>
